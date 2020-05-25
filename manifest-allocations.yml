@@ -2,11 +2,12 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-    - route: allocations-pal-praveena.cfapps.io
+  - route: allocations-pal-praveena.cfapps.io
   memory: 1G
   instances: 1
   env:
-       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+#    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-3feb5c38-44a4-481c-a6a5-742ef60192ed.cfapps.io
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
   - tracker-service-registry
