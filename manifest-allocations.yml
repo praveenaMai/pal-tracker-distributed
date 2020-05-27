@@ -8,6 +8,8 @@ applications:
   env:
 #    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-3feb5c38-44a4-481c-a6a5-742ef60192ed.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    GRANT_TYPE: client_credentials
   services:
   - tracker-allocations-database
   - tracker-service-registry
+  - tracker-sso
